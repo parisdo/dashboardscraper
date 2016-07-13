@@ -1,0 +1,97 @@
+Recrawl - Source has not been updated in last month:
+
+
+
+Source Configuration - Being fixed by DISCO developers:
+
+id_num
+ nif-0000-11872 
+ nif-0000-30123 
+ nif-0000-02587 
+ nlx_151903 
+ nif-0000-08190 
+ nif-0000-21145 
+ nif-0000-00517 
+ nlx_31015 
+ nif-0000-00474 
+ nif-0000-03160 
+ nlx_151885 
+ nif-0000-00054 
+ nif-0000-00414 
+ nif-0000-00134 
+ nif-0000-00016 
+ nif-0000-22933 
+ nlx_83091 
+ nif-0000-20925 
+
+Check Source - Source last crawl over a month ago, was not approved/deployed
+
+id_num
+ nlx_144428 
+ nif-0000-25476 
+ nlx_146253 
+ nlx_152700 
+ nif-0000-02550 
+ nif-0000-20828 
+ nlx_152559 
+ nlx_151671 
+ nlx_154720 
+ nif-0000-00182 
+ nif-0000-00255 
+ nif-0000-30415 
+ nif-0000-25420 
+ nif-0000-08127 
+ nif-0000-00130 
+ nif-0000-00142 
+ nif-0000-02915 
+ nlx_151647 
+ nlx_152871 
+ nlx_152892 
+ nif-0000-21197 
+ nlx_151660 
+ nlx_157804 
+ SCR_014194 
+ nif-0000-34000 
+ nif-0000-10319 
+ nlx_152633 
+ SCR_013731 
+ nlx_55906 
+ nif-0000-10454 
+ nif-0000-00202 
+ nif-0000-03208 
+ nif-0000-03213 
+ nif-0000-03215 
+ nif-0000-03216 
+ nif-0000-21306 
+ nlx_157982 
+ nlx_158620 
+ nlx_32805 
+ nif-0000-23302 
+ nif-0000-00026 
+ nif-0000-03531 
+ nlx_151749 
+ nif-0000-37639 
+ nlx_143941 
+ nif-0000-03637 
+ nlx_152660 
+
+Source Imported - Source needs to be checked:
+
+id_num
+ nif-0000-00241 
+ nif-0000-00093 
+ nif-0000-02649 
+ nlx_158294 
+ nlx_157874 
+ nif-0000-00380 
+ OMICS_00269 
+ nif-0000-33506 
+ nif-0000-00088 
+ nlx_151835 
+ nif-0000-00045 
+ nlx_78616 
+ SCR_013705 
+ nlx_84521 
+ nlx_158287 
+ nif-0000-04375 
+

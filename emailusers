@@ -1,0 +1,5 @@
+#!/bin/sh
+
+~/Desktop/dashboardscraper/server.js > ~/Desktop/dashboardscraper/finalemail.txt
+
+mail -s 'update report' pariscdo@gmail.com < ~/Desktop/dashboardscraper/finalemail.txt
