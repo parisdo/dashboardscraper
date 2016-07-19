@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+/*
+ * Created By: Paris Do
+ */
 var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
@@ -16,8 +19,8 @@ request(url, function(error, response, html){
     var output = [];
     var recrawl = [];
     var src_config = [];
-    var man_check = [];
-    var warning = [];
+    var check_src = [];
+    var src_imported = [];
 
 
     /* Check if character is a number */
@@ -26,7 +29,7 @@ request(url, function(error, response, html){
     }
 
     /* Calculate difference between the current date and the checked date */
-    function diff_btwn_months_in_days (d1) {
+    function diff_between_todays_date (d1) {
       var date1 = d1.split("-");
       var date2 = new Date();
       var new_date1 = new Date(date1[0], date1[1] - 1, date1[2]);
@@ -35,7 +38,7 @@ request(url, function(error, response, html){
     }
 
     /* Calculate difference between checked date and date */
-    function plus_minus_three_days (d1, d2) {
+    function diff_btwn_two_dates (d1, d2) {
       var date1 = d1.split("-");
       var date2 = d2.split("-");
       var new_date1 = new Date(date1[0], date1[1]-1, date1[2]);
@@ -96,17 +99,17 @@ request(url, function(error, response, html){
                 if (status2 == "Scheduled, paused")
                     src_config.push(json1);
                 // older than 31 days
-                else if (diff_btwn_months_in_days(checked) >= 31) {
-                    if ((ver_date == checked) && (diff_btwn_months_in_days(checked) < 4))
+                else if (diff_between_todays_date(checked) >= 31) {
+                    if ((ver_date == checked) && (diff_btwn_two_dates(checked, date) < 6))
                         recrawl.push(json1);
                     else
-                        man_check.push(json1);
+                        check_src.push(json1);
                 //
-                // if (((ver_date != checked) || (diff_btwn_months_in_days(checked) >= 4)) && type != "Scheduled, paused")
-                //   man_check.push(json1);
+                // if (((ver_date != checked) || (diff_between_todays_date(checked) >= 4)) && type != "Scheduled, paused")
+                //   check_src.push(json1);
                 }
-                else if (status1 != "No changes" && plus_minus_three_days(checked, date) >= 4) {
-                    warning.push(json1);
+                else if (status1 != "No changes" && diff_btwn_two_dates(checked, date) >= 6) {
+                    src_imported.push(json1);
               }
             }
           }
@@ -161,13 +164,15 @@ function convert2csv(filename, title, data, showlabel) {
   return csv;
 }
 
+var currentTime = new Date();
+
 // get data in csv form
 var recrawl = convert2csv('recrawl.txt', 'Recrawl - Source has not been updated in last month:', recrawl, true);
-var warning = convert2csv('warning.txt', 'Source Imported - Source needs to be checked:', warning, true);
+var src_imported = convert2csv('src_imported.txt', 'Source Imported - Source needs to be checked:', src_imported, true);
 var src_config = convert2csv('src_config.txt', 'Source Configuration - Being fixed by DISCO developers:', src_config, true);
-var man_check = convert2csv('man_check.txt', 'Check Source - Source last crawl over a month ago, was not approved/deployed', man_check, true);
+var check_src = convert2csv('check_src.txt', 'Check Source - Source last crawl over a month ago, was not approved/deployed', check_src, true);
 
-finalemail = recrawl.concat("\n" + src_config, "\n" + man_check, "\n" + warning);
+finalemail = recrawl.concat("\n" + src_config, "\n" + check_src, "\n" + src_imported, "\n" + currentTime);
 
 /* write concatonated data to finalemail.txt to eventually send to users*/
 console.log(finalemail);
