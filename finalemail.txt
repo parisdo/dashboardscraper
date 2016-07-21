@@ -1,4 +1,4 @@
-Recrawl - Source has not been updated in last month:
+Recrawl - Last crawl over a month ago:
 
 id_num
  SCR_013727 
@@ -9,6 +9,25 @@ id_num
  nif-0000-02801 
  nif-0000-03266 
  nlx_152660 
+
+Check Source - Last approved crawl over a month ago:
+
+id_num
+ nif-0000-02915 
+ nlx_153873 
+ nif-0000-03216 
+ nlx_84521 
+ nif-0000-00026 
+
+Within the Past Month - Source crawled, needs to be checked:
+
+id_num
+ nif-0000-00093 
+ nlx_158294 
+ nif-0000-00380 
+ nif-0000-00088 
+ nlx_78616 
+ nif-0000-04375 
 
 Source Configuration - Being fixed by DISCO developers:
 
@@ -22,11 +41,13 @@ id_num
  nif-0000-08190 
  nif-0000-21145 
  nif-0000-00517 
+ nlx_151647 
  nlx_152892 
+ SCR_014194 
  nlx_31015 
  nif-0000-00474 
+ nif-0000-34000 
  nif-0000-03160 
- SCR_013731 
  nlx_151885 
  nif-0000-00054 
  nif-0000-10454 
@@ -38,27 +59,4 @@ id_num
  nlx_83091 
  nif-0000-20925 
 
-Check Source - Source last crawl over a month ago, was not approved/deployed
-
-id_num
- nlx_154720 
- nif-0000-02915 
- nlx_151647 
- SCR_014194 
- nif-0000-34000 
- nif-0000-03216 
- nif-0000-00026 
-
-Source Imported - Source needs to be checked:
-
-id_num
- nif-0000-00093 
- nlx_158294 
- nif-0000-00380 
- nif-0000-00088 
- nif-0000-00045 
- nlx_78616 
- nlx_84521 
- nif-0000-04375 
-
-Mon Jul 18 2016 16:30:41 GMT-0700 (PDT)
+Wed Jul 20 2016 16:54:12 GMT-0700 (PDT)

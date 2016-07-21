@@ -167,12 +167,12 @@ function convert2csv(filename, title, data, showlabel) {
 var currentTime = new Date();
 
 // get data in csv form
-var recrawl = convert2csv('recrawl.txt', 'Recrawl - Source has not been updated in last month:', recrawl, true);
-var src_imported = convert2csv('src_imported.txt', 'Source Imported - Source needs to be checked:', src_imported, true);
+var recrawl = convert2csv('recrawl.txt', 'Recrawl - Last crawl over a month ago:', recrawl, true);
+var src_imported = convert2csv('src_imported.txt', 'Within the Past Month - Source crawled, needs to be checked:', src_imported, true);
 var src_config = convert2csv('src_config.txt', 'Source Configuration - Being fixed by DISCO developers:', src_config, true);
-var check_src = convert2csv('check_src.txt', 'Check Source - Source last crawl over a month ago, was not approved/deployed', check_src, true);
+var check_src = convert2csv('check_src.txt', 'Check Source - Last approved crawl over a month ago:', check_src, true);
 
-finalemail = recrawl.concat("\n" + src_config, "\n" + check_src, "\n" + src_imported, "\n" + currentTime);
+finalemail = recrawl.concat("\n" + check_src, "\n" + src_imported, "\n" + src_config, "\n" + currentTime);
 
 /* write concatonated data to finalemail.txt to eventually send to users*/
 console.log(finalemail);
