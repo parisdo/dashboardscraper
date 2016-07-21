@@ -1,6 +1,0 @@
-Warning:
-
-id_num
- nlx_32805 
- nif-0000-00026 
- nlx_152660 
